@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); /* Einfügen von Schriftarten */
+*
+{
+    font-family: 'Poppins', sans-serif; /* Auswahl der Schriftart */
+    margin: 0; /* Seitenabstände in pixeln */
+    padding: 0; /* Innenabstand der vier Seiten */
+    box-sizing: border-box; /* Gesamtbreite und -höhe eines Elements */
+}
+body
+{
+    min-height: 100vh; /* Minimale Höhe über den Karten */
+    display: flex; /* Anzeigen des Elements */
+    align-items: center; /* Ausrichtung der Karten */
+    background: #fff; /* Hintergrundfarbe der Website */
+    justify-content: center; /* Anordnung der Elemente ( Karten ) */
+}
+body::before
+{
+    content: ''; /* Inhalt */
+    position: absolute; /* Positionsart */
+    top: 0; /* Position */
+    left: 0; /* Position */
+    width: 100%; /* Breite */
+    height: 100%; /* Höhe */
+    background: linear-gradient(#8f7100 , #f6c94e); /* Farben des Hintergrunds, automatisch zu Kreis gemacht --> */
+    clip-path: circle(30% at right 70%); /* Größe und Anordnung der Kreise am Rand */
+}
+body::after
+{
+    content: ''; /* Inhalt */
+    position: absolute; /* Positionsart */
+    top: 0; /* Position */
+    left: 0; /* Position */
+    width: 100%; /* Breite */
+    height: 100%; /* Höhe */
+    background: linear-gradient(#8f7100, #f3dc8f); /* Farben des Hintergrunds, automatisch zu Kreis gemacht --> */
+    clip-path: circle(20% at 10% 10%); /* Größe und Anordnung der Kreise am Rand */
+}
+.Karten
+{
+    position: relative; /* Positionsart */
+    display: flex; /* Anzeigen des Elements */
+    align-items: center; /* Ausrichtung der Karten */
+    flex-wrap: wrap; /* wrap = Anzeigen des Elements auf mehreren Linien */
+    z-index: 1; /* Reihenfolge der Elemente, größere Nummer = Überdecken der anderen Elemente */
+    justify-content: center; /* Anordnung der Elemente ( Karten ) */
+    max-width: 1200px; /* Maximale Breite */
+}
+.Karten .Karte
+{
+    position: relative; /* Positionsart */
+    width: 280px; /* Breite */
+    height: 400px; /* Höhe */
+    margin: 30px; /* Seitenabstände in pixeln */
+    overflow: hidden; /* Ob Inhalte aus dem Element herausragen dürfen oder versteckt werden */
+    display: flex; /* Anzeigen des Elements */
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Grenzen nach oben */
+    border-left: 1px solid rgba(255, 255, 255, 0.5); /* Grenzen nach links */
+    justify-content: center; /* Anordnung der Elemente ( Karten ) */
+    align-items: center; /* Ausrichtung der Karten */
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); /* Schatten der Box in pixeln */
+    border-radius: 15px; /* Radius der Grenze von den Karten */
+    background: rgba(255, 255, 255, 0.1); /* Hintergrundfarbe der Karten */
+    backdrop-filter: blur(5px); /* Verwischen des Hintergrunds */
+}
+.Karten .Karte .Karteninhalt
+{
+    padding: 20px; /* Innenabstand der vier Seiten */
+    opacity: 0; /* Transparenz der Karten */
+    transition: 0.5s; /* Zeit bis die Animation stattfindet */
+    text-align: center; /* Ausrichtung des Textes innerhalb der Karten */
+    transform: translateY(100px); /* Modifizierung des Bildes */
+}
+.Karten .Karte .Karteninhalt
+{
+    opacity: 1; /* Transparenz der Karten */
+    transform: translateY(0px); /* Modifizierung des Bildes */
+}
+.Karten .Karte .Karteninhalt h7
+{
+    position: absolute; /* Positionsart */
+    top: -80px; /* Position */
+    right: 110px; /* Position */
+    pointer-events: none; /* Beeinflussung der Elemente durch Mouse-Movement */
+    font-size: 1.5em; /* Schriftgröße */
+}
+.Karten .Karte .Karteninhalt h8
+{
+    position: absolute; /* Positionsart */
+    top: -80px; /* Position */
+    right: 95px; /* Position */
+    pointer-events: none; /* Beeinflussung der Elemente durch Mouse-Movement */
+    font-size: 1.5em; /* Schriftgröße */
+}
+.Karten .Karte .Karteninhalt h9
+{
+    position: absolute; /* Positionsart */
+    top: -80px; /* Position */
+    right: 80px; /* Position */
+    pointer-events: none; /* Beeinflussung der Elemente durch Mouse-Movement */
+    font-size: 1.5em; /* Schriftgröße */
+}
+.Karten .Karte .Karteninhalt h3
+{
+    font-size: 1.8em; /* Schriftgröße */
+    z-index: 1; /* Reihenfolge der Elemente, größere Nummer = Überdecken der anderen Elemente */
+    color: #ffffff; /* Farbe */
+}
+.Karten .Karte .Karteninhalt h5
+{
+    position: absolute; /* Positionsart */
+    top: -45px; /* Position */
+    right: 30px; /* Position */
+    font-size: 1.5em; /* Schriftgröße */
+    pointer-events: none; /* Beeinflussung der Elemente durch Mouse-Movement */
+}
+.Karten .Karte .Karteninhalt p
+{
+    font-size: 1em; /* Schriftgröße */
+    color: #ffffff; /* Farbe */
+    font-weight: 300; /* Stärke der Schrift */
+}
+.Karten .Karte .Karteninhalt a
+{
+    position: relative; /* Positionsart */
+    display: inline-block; /* Anzeigen des Elements */
+    padding: 8px 20px; /* Innenabstand der vier Seiten */
+    margin-top: 15px; /* Seitenabstände in pixeln nach oben */
+    border-radius: 20px; /* Radius der Grenze von den Karten */
+    text-decoration: none; /* Textformatierung */
+    box-shadow: 0 5px 15px rgb(0, 0 , 0, 0.2); /* Schatten und Farbe der Box in pixeln */
+    background: linear-gradient(#ffffff ,#be970e); /* Hintergrundfarbe */
+    color: #000; /* Farbe */
+    font-weight: 500; /* Stärke der Schrift */
+}
+.Karten .Karte1
+{
+    position: relative; /* Positionsart */
+    width: 1000px; /* Breite */
+    height: 150px; /* Höhe */
+    margin: 20px; /* Seitenabstände in pixeln */
+    overflow: hidden; /* Ob Inhalte aus dem Element herausragen dürfen oder versteckt werden */
+    display: flex; /* Anzeigen des Elements */
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Grenzen nach oben */
+    border-left: 1px solid rgba(255, 255, 255, 0.5); /* Grenzen nach links */
+    justify-content: center; /* Anordnung der Elemente ( Karten ) */
+    align-items: center; /* Ausrichtung der Karten */
+    backdrop-filter: blur(5px); /* Verwischen des Hintergrunds */
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); /* Schatten der Box in pixeln */
+    border-radius: 15px; /* Radius der Grenze von den Karten */
+    background: rgba(255, 255, 255, 0.1); /* Hintergrundfarbe der Karten */
+}
+.Karten .Karte1 .Karteninhalt1
+{
+    padding: 20px; /* Innenabstand der vier Seiten */
+    opacity: 0; /* Transparenz der Karten */
+    transition: 0.5s; /* Zeit bis die Animation stattfindet */
+    text-align: center; /* Ausrichtung des Textes */
+    transform: translateY(100px); /* Modifizierung des Bildes */
+}
+.Karten .Karte1 .Karteninhalt1
+{
+    transform: translateY(0px); /* Modifizierung des Bildes */
+    opacity: 1; /* Transparenz der Karten */
+}
+.Karten .Karte1 .Karteninhalt1 h3
+{
+    position: absolute; /* Positionsart */
+    top: -100px; /* Position */
+    right: 100px; /* Position */
+    pointer-events: none; /* Beeinflussung der Elemente durch Mouse-Movement */
+    font-size: 4em; /* Schriftgröße */
+    color: rgb(0, 0, 0); /* Farbe */
+}
+.Karten .Karte1 .Karteninhalt1 p
+{
+    font-size: 1em; /* Schriftgröße */
+    font-weight: 300; /* Stärke der Schrift */
+    color: #000; /* Farbe */
+}
+.Karten .Karte1 .Karteninhalt1 a
+{
+    position: relative; /* Positionsart */
+    display: inline-block; /* Anzeigen des Elements */
+    padding: 8px 20px; /* Innenabstand der vier Seiten */
+    border-radius: 20px; /* Radius der Grenze von den Karten */
+    text-decoration: none; /* Textformatierung */
+    font-weight: 500; /* Stärke der Schrift */
+    box-shadow: 0 5px 15px rgb(0, 0 , 0, 0.2); /* Schatten der Box in pixeln */
+    margin-top: 15px; /* Seitenabstände in pixeln nach oben */
+    background: linear-gradient(#000000 ,#be970e); /* Hintergrundfarbe */
+    color: #000; /* Farbe */
+}
+.Karten .Karte1 .Bild
+{
+    position: absolute; /* Positionsart */
+    top: 0%; /* Position */
+    left: 125%; /* Position */
+    max-width: 250px; /* Maximale Breite */
+    transform-style: preserve-3d; /* Style der Modifizierung des Bildes */
+    transition: 0.5s; /* Zeit bis die Animation stattfindet */
+    z-index: 11; /* Reihenfolge der Elemente, größere Nummer = Überdecken der anderen Elemente */
+}
+.Karten .Karte1 .Bild1
+{
+    position: absolute; /* Positionsart */
+    top: 0%; /* Position */
+    left: -125%; /* Position */
+    max-width: 250px; /* Maximale Breite */
+    transform-style: preserve-3d; /* Style der Modifizierung des Bildes */
+    transition: 0.5s; /* Zeit bis die Animation stattfindet */
+    z-index: 11; /* Reihenfolge der Elemente, größere Nummer = Überdecken der anderen Elemente */
+}
+.Karte
+{
+    max-width: 280px; /* Maximale Breite */
+    animation: animate 5s linear infinite; /* Animationslänge */
+}

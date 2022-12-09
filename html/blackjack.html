@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/app.js"></script>
+</head>
+<body>
+<ul id="guthaben">
+    <li class="liste" id="spieler0Guthaben">Spieler 1 Guthaben: 500€</li>
+    <li class="liste" id="spieler1Guthaben">Spieler 2 Guthaben: 500€</li>
+    <li class="liste" id="spieler2Guthaben">Spieler 3 Guthaben: 500€</li>
+</ul>
+
+<ul id="gewinne">
+    <li class="liste" id="spieler0">Spieler 1 Einsatz: €</li>
+    <li class="liste" id="spieler1">Spieler 2 Einsatz: €</li>
+    <li class="liste" id="spieler2">Spieler 3 Einsatz: €</li>
+</ul>
+
+<div id="einsatzDiv">
+    <label for="spielerAuswahl">Spieler wählen:</label>
+
+    <select name="spieler" id="spielerAuswahl">
+        <option value="1">Spieler 1</option>
+        <option value="2">Spieler 2</option>
+        <option value="3">Spieler 3</option>
+    </select>
+    <br>
+    <input type="text" id="einsatzSpieler">
+    <input type="Submit" id="submitEinsatz" value="Einsatz setzen" class="button-28">
+</div>
+
+
+<h1 id="actualPlayer">Spieler 1 ist an der Reihe</h1>
+
+
+<div id="btns">
+    <button type="submit" id="btn1"class="button-28" role="button">Neue Runde</button>
+    <button type="submit" id="btn2"class="button-28" role="button">hit</button>
+    <button type="submit" id="btn3"class="button-28" role="button">surrender</button>
+</div>
+<div id="playerCards" class="spielerKarten">
+    <div id="spielerKarten1" >
+        <p>Spieler 1:</p>
+    </div>
+    <div id="spielerKarten2">
+        <p>Spieler 2:</p>
+    </div>
+    <div id="spielerKarten3">
+        <p>Spieler 3:</p>
+    </div>
+</div>
+<p>Dealer Karten:</p>
+<div id="dealerCards"></div>
+</body>
+</html>

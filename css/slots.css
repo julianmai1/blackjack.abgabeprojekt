@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    background: #3498db;
+}
+
+.flex-container {
+    display: flex;
+    width: 400px;
+    height: 200px;
+    margin-top: 33vh;
+    margin-left: 38vw;
+
+}
+.flex-child {
+    flex: 1;
+    border: 2px solid white;
+    margin: 10px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(52, 219, 213, 0.71) -5px 5px, rgb(52, 144, 219) -10px 10px, rgb(52, 110, 219) -15px 15px, rgb(52, 130, 219) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+#spinButton {
+    background: #2ecc71;
+    width: 130px;
+    height: 50px;
+    border: 3px solid #2ecc71;
+    border-radius: 10px;
+    color: black;
+    font-size: 24px;
+    margin-left: 45vw;
+    margin-top: 2vh;
+    transition: 0.5s ease-in-out;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#einsatz {
+    background: #9b59b6;
+    width: 130px;
+    height: 30px;
+    border: 3px solid #9b59b6;
+    border-radius: 10px;
+    color: black;
+    font-size: 24px;
+    margin-left: 45vw;
+    margin-top: 2vh;
+    transition: 0.5s ease-in-out;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#einsatzSubmitButton {
+    background: #9b59b6;
+    width: 130px;
+    height: 30px;
+    border: 3px solid #9b59b6;
+    border-radius: 10px;
+    color: black;
+    font-size: 24px;
+    margin-left: 45vw;
+    margin-top: 2vh;
+    transition: 0.5s ease-in-out;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#einsatzSubmitButton:hover{
+    border: 3px solid #9b59b6;
+    background: #3498db;
+}
+
+#spinButton:hover {
+    border: 3px solid #2ecc71;
+    background: #3498db;
+}
+
+#slot1Symbol {
+    text-align: center;
+    font-size: 48px;
+    transition: 0.5s ease-in-out;
+    padding-bottom: 10px;
+    display: block;
+    position: absolute;
+    left: 25px;
+    overflow: hidden;
+    top: 0px;
+}
+
+#slot2Symbol {
+    text-align: center;
+    font-size: 48px;
+    transition: 0.5s ease-in-out;
+    padding-bottom: 10px;
+    display: block;
+    position: absolute;
+    left: 25px;
+    top: 0px;
+}
+
+#slot3Symbol {
+    text-align: center;
+    font-size: 48px;
+    transition: 0.5s ease-in-out;
+    padding-bottom: 10px;
+    display: block;
+    position: absolute;
+    left: 25px;
+    top: 0px;
+}
+
+#jackpot_h1 {
+    visibility: hidden;
+    font-size: 42px;
+    text-align: center;
+    color: white;
+}
+
+#guthaben {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+
+
